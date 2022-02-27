@@ -30,7 +30,7 @@
       <div class="content"> 
 
         <div class="header__logo"><img src="img/logo-m3.png" alt=""></div>
-        <div class="header__cart"><i class="fa-solid fa-bag-shopping"></i></div>
+        <div class="header__cart"><i class="fa-solid fa-bag-shopping"></i> <span class="cart__number"></span> </div>
 
       </div>
 
@@ -43,13 +43,15 @@
         <div class="main__header">
   
           <h1 class="main__tittle">Blusas</h1>
-    
-          <select class="main__select">
-            <option hidden selected>Ordenar por:</option>
-            <option>Mais Recentes</option>
-            <option>Menor Preço</option>
-            <option>Maior Preço</option></select>
-          </select>
+
+          <div class="main__dropdown">
+            <div class="dropbtn">Ordenar por: <i class="fa-solid fa-angle-down"></i></div>
+            <div class="dropdown-content">
+            <a class="sort_option date">Mais Recentes</a>
+            <a class="sort_option lowPrice">Menor Preço</a>
+            <a class="sort_option highPrice">Maior Preço</a>
+            </div>
+          </div>
 
           <div class="main__btngroup">
               <div class="main__btn btn_aside aside__filter">Filtrar</div>
@@ -77,27 +79,27 @@
                   <ul class="filter__color panel">
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
-                      <span class="checkbox__checkmark" >Amarelo</span>
+                      <input class="filter__checkbox color__item" value="Amarelo" type="checkbox"/>
+                      <span>Amarelo</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox color__item" value="Azul" type="checkbox"/>
                       <span>Azul</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox color__item" value="Branco" type="checkbox"/>
                       <span>Branco</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox color__item" value="Cinza" type="checkbox"/>
                       <span>Cinza</span>
                     </li>
       
                     <li class="filter__list">
-                      <input  class="filter__checkbox" type="checkbox"/>
+                      <input  class="filter__checkbox color__item" value="Laranja" type="checkbox"/>
                       <span>Laranja</span>
                     </li>
       
@@ -106,27 +108,27 @@
                     </li>    
 
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox color__item" value="Verde" type="checkbox"/>
                       <span>Verde</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox color__item" value="Vermelho" type="checkbox"/>
                       <span>Vermelho</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox color__item" value="Preto" type="checkbox"/>
                       <span>Preto</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox color__item" value="Rose" type="checkbox"/>
                       <span>Rosa</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox color__item" value="Vinho" type="checkbox"/>
                       <span>Vinho</span>
                     </li>
 
@@ -142,17 +144,17 @@
                 <div class="panel">
 
                   <div class="size">
-                    <div class="size__item">P</div>
-                    <div class="size__item">M</div>
-                    <div class="size__item">G</div>
-                    <div class="size__item">GG</div>
-                    <div class="size__item">U</div>
-                    <div class="size__item">36</div>
-                    <div class="size__item">38</div>
-                    <div class="size__item">40</div>
-                    <div class="size__item">36</div>
-                    <div class="size__item">38</div>
-                    <div class="size__item">40</div>
+                    <div class="size__item filter__checkbox">P</div>
+                    <div class="size__item filter__checkbox">M</div>
+                    <div class="size__item filter__checkbox">G</div>
+                    <div class="size__item filter__checkbox">GG</div>
+                    <div class="size__item filter__checkbox">U</div>
+                    <div class="size__item filter__checkbox">36</div>
+                    <div class="size__item filter__checkbox">38</div>
+                    <div class="size__item filter__checkbox">40</div>
+                    <div class="size__item filter__checkbox">36</div>
+                    <div class="size__item filter__checkbox">38</div>
+                    <div class="size__item filter__checkbox">40</div>
                   </div>
 
                 </div>
@@ -168,27 +170,27 @@
                   <ul class="panel">
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox price__item" data-max="50" data-min="0" type="checkbox"/>
                       <span>de R$0 até R$50</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox price__item" data-max="150" data-min="51" type="checkbox"/>
                       <span>de R$51 até R$150</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox price__item" data-max="300" data-min="151" type="checkbox"/>
                       <span>de R$151 até R$300</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox price__item" data-max="500" data-min="301" type="checkbox"/>
                       <span>de R$301 até R$500</span>
                     </li>
       
                     <li class="filter__list">
-                      <input class="filter__checkbox" type="checkbox"/>
+                      <input class="filter__checkbox price__item"  data-max="99999999" data-min="500" type="checkbox" />
                       <span>a partir de R$500</span>
                     </li>
       
@@ -208,9 +210,9 @@
           </div>
 
           <div class="aside__content"> 
-            <h2 class="sort_option">Mais recente</h2>
-            <h2 class="sort_option">Maior Preço</h2>
-            <h2 class="sort_option">Menor Preço</h2>
+            <h2 class="sort_option date">Mais recente</h2>
+            <h2 class="sort_option highPrice">Maior Preço</h2>
+            <h2 class="sort_option lowPrice">Menor Preço</h2>
 
           </div>
 
