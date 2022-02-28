@@ -1,10 +1,13 @@
 let product = [];
 let cartLenght = 0;
 let filterProduct;
-let filterColor = document.querySelectorAll(".color__item");
-let filterSize = document.querySelectorAll(".size__item");
-let filterPrice = document.querySelectorAll(".price__item");
+const filterColor = document.querySelectorAll(".color__item");
+const filterSize = document.querySelectorAll(".size__item");
+const filterPrice = document.querySelectorAll(".price__item");
 const displayProduct = document.querySelector(".display__products");
+let itemPerload = ((window.innerWidth > 800) ? 9 : 4)
+let itemsDisplayed;
+
 
 
 function renderProduct() {
@@ -39,16 +42,31 @@ function renderProduct() {
         }
     })
 
-    filterProduct.map((item, i) => {
-        let productItem = document.querySelector('.models .product__item').cloneNode(true);
+    itemsDisplayed = 0;
 
-        productItem.querySelector('.product__img').src = item.image;
-        productItem.querySelector('.product__name').innerHTML = item.name;
-        productItem.querySelector('.product__price').innerHTML = `R$ ${item.price.toFixed(2)}`;
-        productItem.querySelector('.product__parcel').innerHTML = `até ${item.parcelamento[0]}X de R$ ${item.parcelamento[1]}`;
+    for (let i in filterProduct){
 
-        displayProduct.append(productItem);
-    })
+        if (i >= itemPerload){
+            break;
+        }else{
+            itemsDisplayed += 1
+            let productItem = document.querySelector('.models .product__item').cloneNode(true);
+
+            productItem.querySelector('.product__img').src = filterProduct[i].image;
+            productItem.querySelector('.product__name').innerHTML = filterProduct[i].name;
+            productItem.querySelector('.product__price').innerHTML = `R$ ${filterProduct[i].price.toFixed(2)}`;
+            productItem.querySelector('.product__parcel').innerHTML = `até ${filterProduct[i].parcelamento[0]}X de R$ ${filterProduct[i].parcelamento[1]}`;
+    
+            displayProduct.append(productItem);
+        }
+    }
+
+    if (itemsDisplayed >= filterProduct.length){
+        document.querySelector(".load").style.display = "none";
+    }else{
+        document.querySelector(".load").style.display = "flex";
+        filterProduct = filterProduct.slice(itemPerload);
+    }
 
     document.querySelectorAll(".product__btn").forEach(e => e.addEventListener("click", function (el) {
         cartLenght += 1
@@ -155,6 +173,44 @@ document.querySelectorAll(".filter__checkbox").forEach(e => e.addEventListener("
     }
 
 }))
+
+document.querySelector(".load__btn").addEventListener("click", function (e) {
+
+        for (let i in filterProduct){
+
+            console.log(filterProduct)
+
+        if (i >= itemPerload){
+            break;
+        }else{
+            itemsDisplayed += 1
+            let productItem = document.querySelector('.models .product__item').cloneNode(true);
+
+            productItem.querySelector('.product__img').src = filterProduct[i].image;
+            productItem.querySelector('.product__name').innerHTML = filterProduct[i].name;
+            productItem.querySelector('.product__price').innerHTML = `R$ ${filterProduct[i].price.toFixed(2)}`;
+            productItem.querySelector('.product__parcel').innerHTML = `até ${filterProduct[i].parcelamento[0]}X de R$ ${filterProduct[i].parcelamento[1]}`;
+    
+            displayProduct.append(productItem);
+        }
+    }
+
+    if (itemsDisplayed >= filterProduct.length){
+        document.querySelector(".load").style.display = "none";
+    }else{
+        document.querySelector(".load").style.display = "flex";
+        filterProduct = filterProduct.slice(itemPerload);
+    }
+
+    document.querySelectorAll(".product__btn").forEach(e => e.addEventListener("click", function (el) {
+        cartLenght += 1
+        let cartnumber = document.querySelector(".cart__number")
+        cartnumber.innerText = cartLenght;
+        cartnumber.style.display = "block";
+    }))
+
+
+});
 
 document.querySelector(".btn_clean").addEventListener("click", cleanFilter);
 document.querySelector(".btn_apply").addEventListener("click", renderProduct);
