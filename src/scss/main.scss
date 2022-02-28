@@ -19,7 +19,10 @@ $dark_gray: #666666;
 }
 
 body {
+    @include flex(center);
+    flex-direction:column;
     font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
     height: 100%;
 }
 
@@ -62,8 +65,10 @@ header {
 
 main {
     @include flex(center);
+    align-items: flex-start;
     width: 100vw;
-
+    flex: 1;
+    
     .main__header {
         @include flex(space-between);
         padding: 50px 0;
@@ -136,6 +141,10 @@ main {
         }
 
         ul.filter__color .filter__list:nth-last-child(-n + 5) {
+            display: none;
+        }
+
+        .filter__btn{
             display: none;
         }
     }
@@ -276,20 +285,43 @@ option:hover {
     }
 }
 
+.load{
+    @include flex(center);
+
+    .load__btn{
+        margin: 35px;
+        border: none;
+        background-color: $primary;
+        color: $white;
+        padding: 10px 50px;
+    }
+}
+
+footer{
+    @include flex(center);
+    height: 30px;
+    width: 100%;
+    background-color: $black;
+    color: $white;
+}
+
+
+
+
 @media only screen and (max-width: 800px) {
     main {
         aside {
-            position: absolute;
-            top: 0;
-            left: -100%;
             background-color: $white;
-            z-index: 3;
-            width: 100vw;
-            min-height: 100vh;
+            position:fixed;
+            height: 100vh;
+            left:100vw;
+            right:0;
+            top:0;
+            bottom:0;
         }
 
         aside.active {
-            transform: translateX(100%);
+            left: 0;
         }
 
         .sort_option {
@@ -338,12 +370,39 @@ option:hover {
             font-size: 25px;
         }
 
+        
+        .filtersgroup .filter__btn{
+            @include flex(space-between);
+
+            button{
+                cursor: pointer;
+                width: 45%;
+                height: 40px;
+                border: none;
+                font-size: 20px;
+            }
+
+            .btn_apply{
+                background-color: $primary;
+                color: $white;
+            }
+
+            .btn_clean{
+                background-color: #ffffff;
+                color: $light_gray;
+                border: 1px solid $light_gray;
+
+            }
+            
+        }
+
         .filtersgroup .filter__tittle i {
             opacity: 1;
         }
 
         .aside__header {
             @include flex(space-between);
+            height: 66pxpx;
             border-bottom: 1px solid $light_gray;
             font-size: 25px;
             padding: 20px 18px;
@@ -351,7 +410,20 @@ option:hover {
         }
 
         .aside__content {
+            @include flex(start);
+            align-items: stretch;
+            flex-direction: column;
+            height: calc(100% - 66px - 40px - 18px);
+            position: relative;
             padding: 40px 18px 18px 18px;
+        }
+
+        .filter__content{
+            flex: 1;
+        }
+
+        .filter__footer{
+            width: 100%;
         }
 
         .sort_option {

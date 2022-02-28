@@ -6,143 +6,144 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/9fe314a765.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
   <title>Desenvolvedor M3</title>
   <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
 
-    <div class="models hide">
-      <div class="product__item">
+  <div class="models hide">
+    <div class="product__item">
 
-          <img class="product__img"> 
-          <p class="product__name"></p>
-          <p class="product__price"></p>
-          <p class="product__parcel"></p>
-          <button class="product__btn">Comprar</button>
-      </div>
+      <img class="product__img">
+      <p class="product__name"></p>
+      <p class="product__price"></p>
+      <p class="product__parcel"></p>
+      <button class="product__btn">Comprar</button>
+    </div>
   </div>
 
+  <header>
 
-    <header>
+    <div class="content">
 
-      <div class="content"> 
+      <div class="header__logo"><img src="img/logo-m3.png" alt=""></div>
+      <div class="header__cart"><i class="fa-solid fa-bag-shopping"></i> <span class="cart__number"></span> </div>
 
-        <div class="header__logo"><img src="img/logo-m3.png" alt=""></div>
-        <div class="header__cart"><i class="fa-solid fa-bag-shopping"></i> <span class="cart__number"></span> </div>
+    </div>
 
-      </div>
+  </header>
 
-    </header>
+  <main>
 
-    <main>
+    <div class="content">
 
-      <div class="content">
+      <div class="main__header">
 
-        <div class="main__header">
-  
-          <h1 class="main__tittle">Blusas</h1>
+        <h1 class="main__tittle">Blusas</h1>
 
-          <div class="main__dropdown">
-            <div class="dropbtn">Ordenar por: <i class="fa-solid fa-angle-down"></i></div>
-            <div class="dropdown-content">
+        <div class="main__dropdown">
+          <div class="dropbtn">Ordenar por: <i class="fa-solid fa-angle-down"></i></div>
+          <div class="dropdown-content">
             <a class="sort_option date">Mais Recentes</a>
             <a class="sort_option lowPrice">Menor Preço</a>
             <a class="sort_option highPrice">Maior Preço</a>
-            </div>
           </div>
-
-          <div class="main__btngroup">
-              <div class="main__btn btn_aside aside__filter">Filtrar</div>
-              <div class="main__btn btn_aside aside__sort">Ordenar</div>
-          </div>
-  
         </div>
-  
-  
+
+        <div class="main__btngroup">
+          <div class="main__btn btn_aside aside__filter">Filtrar</div>
+          <div class="main__btn btn_aside aside__sort">Ordenar</div>
+        </div>
+
+      </div>
+
       <div class="main__shop">
 
         <aside class="filtersgroup">
-            
-            <div class="aside__header">
-              <h2>FILTRAR</h2>
-              <i class="fa-solid fa-xmark close"></i>
-            </div>
 
-            <div class="aside__content">
+          <div class="aside__header">
+            <h2>FILTRAR</h2>
+            <i class="fa-solid fa-xmark close"></i>
+          </div>
+
+          <div class="aside__content">
+
+            <div class="filter__content">
 
               <div class="filter">
-      
+  
                 <div class="filter__tittle accordion">CORES <i class="fa-solid fa-angle-down"></i> </div>
-      
-                  <ul class="filter__color panel">
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox color__item" value="Amarelo" type="checkbox"/>
-                      <span>Amarelo</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox color__item" value="Azul" type="checkbox"/>
-                      <span>Azul</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox color__item" value="Branco" type="checkbox"/>
-                      <span>Branco</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox color__item" value="Cinza" type="checkbox"/>
-                      <span>Cinza</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input  class="filter__checkbox color__item" value="Laranja" type="checkbox"/>
-                      <span>Laranja</span>
-                    </li>
-      
-                    <li filter__list>
-                      <a href="#" class="filter__link" >Ver todas as cores <i class="fa-solid fa-angle-down"></i></a>
-                    </li>    
-
-                    <li class="filter__list">
-                      <input class="filter__checkbox color__item" value="Verde" type="checkbox"/>
-                      <span>Verde</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox color__item" value="Vermelho" type="checkbox"/>
-                      <span>Vermelho</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox color__item" value="Preto" type="checkbox"/>
-                      <span>Preto</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox color__item" value="Rose" type="checkbox"/>
-                      <span>Rosa</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox color__item" value="Vinho" type="checkbox"/>
-                      <span>Vinho</span>
-                    </li>
-
-      
-                  </ul>
-      
+  
+                <ul class="filter__color panel">
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Amarelo" type="checkbox" />
+                    <span>Amarelo</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Azul" type="checkbox" />
+                    <span>Azul</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Branco" type="checkbox" />
+                    <span>Branco</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Cinza" type="checkbox" />
+                    <span>Cinza</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Laranja" type="checkbox" />
+                    <span>Laranja</span>
+                  </li>
+  
+                  <li filter__list>
+                    <a href="#" class="filter__link">Ver todas as cores <i class="fa-solid fa-angle-down"></i></a>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Verde" type="checkbox" />
+                    <span>Verde</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Vermelho" type="checkbox" />
+                    <span>Vermelho</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Preto" type="checkbox" />
+                    <span>Preto</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Rose" type="checkbox" />
+                    <span>Rosa</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox color__item" value="Vinho" type="checkbox" />
+                    <span>Vinho</span>
+                  </li>
+  
+                </ul>
+  
               </div>
-      
+  
               <div class="filter">
-      
+  
                 <div class="filter__tittle accordion">TAMANHOS <i class="fa-solid fa-angle-down"></i> </div>
-      
+  
                 <div class="panel">
-
+  
                   <div class="size">
                     <div class="size__item filter__checkbox">P</div>
                     <div class="size__item filter__checkbox">M</div>
@@ -156,50 +157,63 @@
                     <div class="size__item filter__checkbox">38</div>
                     <div class="size__item filter__checkbox">40</div>
                   </div>
-
+  
                 </div>
-
-      
-                
+  
               </div>
-      
+  
               <div class="filter">
-      
+  
                 <div class="filter__tittle accordion">FAIXA DE PREÇO <i class="fa-solid fa-angle-down"></i></div>
-      
-                  <ul class="panel">
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox price__item" data-max="50" data-min="0" type="checkbox"/>
-                      <span>de R$0 até R$50</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox price__item" data-max="150" data-min="51" type="checkbox"/>
-                      <span>de R$51 até R$150</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox price__item" data-max="300" data-min="151" type="checkbox"/>
-                      <span>de R$151 até R$300</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox price__item" data-max="500" data-min="301" type="checkbox"/>
-                      <span>de R$301 até R$500</span>
-                    </li>
-      
-                    <li class="filter__list">
-                      <input class="filter__checkbox price__item"  data-max="99999999" data-min="500" type="checkbox" />
-                      <span>a partir de R$500</span>
-                    </li>
-      
-                  </ul>
-      
-                
+  
+                <ul class="panel">
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox price__item" data-max="50" data-min="0" type="checkbox" />
+                    <span>de R$0 até R$50</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox price__item" data-max="150" data-min="51" type="checkbox" />
+                    <span>de R$51 até R$150</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox price__item" data-max="300" data-min="151" type="checkbox" />
+                    <span>de R$151 até R$300</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox price__item" data-max="500" data-min="301" type="checkbox" />
+                    <span>de R$301 até R$500</span>
+                  </li>
+  
+                  <li class="filter__list">
+                    <input class="filter__checkbox price__item" data-max="99999999" data-min="500" type="checkbox" />
+                    <span>a partir de R$500</span>
+                  </li>
+  
+                </ul>
+  
+  
               </div>
 
             </div>
+
+
+          <div class="filter__footer">
+
+            <div class="filter__btn">
+
+              <button class="btn_apply">Aplicar</button>
+              <button class="btn_clean">Limpar</button>
+
+            </div>
+
+          </div>
+
+        </div>
+
         </aside>
 
         <aside class="sort">
@@ -209,7 +223,7 @@
             <i class="fa-solid fa-xmark close"></i>
           </div>
 
-          <div class="aside__content"> 
+          <div class="aside__content">
             <h2 class="sort_option date">Mais recente</h2>
             <h2 class="sort_option highPrice">Maior Preço</h2>
             <h2 class="sort_option lowPrice">Menor Preço</h2>
@@ -217,24 +231,28 @@
           </div>
 
         </aside>
-  
+
         <section>
 
           <div class="display__products">
 
           </div>
-          
+
+          <div class="load">
+            <button class="load__btn">Carregar Mais</button>
+          </div>
+
         </section>
 
       </div>
 
-      </div>
-      
+    </div>
 
+  </main>
 
-
-    </main>
-
+  <footer>
+    <p>M3: IMPLANTAÇÃO DE E-COMMERCE VTEX</p>
+  </footer>
 
 </body>
 

@@ -59,6 +59,39 @@ function renderProduct() {
 }
 
 
+function cleanFilter(filter){
+
+
+    if (filter == "color"){
+        filterColor.forEach((element, i) => {
+            if (element.classList.contains("active")) {
+                element.classList.remove("active");}})
+
+    }else if (filter == "size"){
+        filterSize.forEach((element, i) => {
+            if (element.classList.contains("active")) {
+                element.classList.remove("active");}})
+
+    }else if(filter == "price"){
+        filterPrice.forEach((element, i) => {
+            if (element.classList.contains("active")) {
+                element.classList.remove("active");}})
+    }else{
+        filterColor.forEach((element, i) => {
+            if (element.classList.contains("active")) {
+                element.classList.remove("active");}})
+        filterSize.forEach((element, i) => {
+            if (element.classList.contains("active")) {
+                element.classList.remove("active");}})
+        filterPrice.forEach((element, i) => {
+            if (element.classList.contains("active")) {
+                element.classList.remove("active");}})
+        renderProduct();
+    }
+
+
+}
+
 let p = new Promise((resolve, reject) => {
     fetch('http://localhost:5000/products')
         .then((response) => response.json())
@@ -107,34 +140,24 @@ document.querySelectorAll(".filter__checkbox").forEach(e => e.addEventListener("
     } else {
 
         if (el.classList.contains("color__item")) {
-
-            filterColor.forEach((element, i) => {
-                if (element.classList.contains("active")) {
-                    element.classList.remove("active");
-                }
-            });
-
+            cleanFilter("color")
         } else if (el.classList.contains("size__item")) {
-
-            filterSize.forEach((element, i) => {
-                if (element.classList.contains("active")) {
-                    element.classList.remove("active");
-                }
-            });
+            cleanFilter("size")
         } else {
-
-            filterPrice.forEach((element, i) => {
-                if (element.classList.contains("active")) {
-                    element.classList.remove("active");
-                }
-            });
+            cleanFilter("price")
         }
 
         el.classList.add("active");
     }
 
-    renderProduct();
+    if (window.innerWidth > 800){
+        renderProduct();
+    }
+
 }))
+
+document.querySelector(".btn_clean").addEventListener("click", cleanFilter);
+document.querySelector(".btn_apply").addEventListener("click", renderProduct);
 
 
 document.querySelector(".filter__link").addEventListener("click", function (e) {
