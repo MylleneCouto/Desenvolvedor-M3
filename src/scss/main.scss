@@ -362,7 +362,7 @@ footer {
             font-size: 25px;
         }
 
-        .filter__btn {
+        .filtergroup .filter__btn {
             @include flex(space-between);
 
             button {
