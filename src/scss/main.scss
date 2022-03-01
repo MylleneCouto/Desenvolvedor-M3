@@ -14,13 +14,12 @@ $dark_gray: #666666;
 
 .hide {
     display: none;
-    appearance: none;
     visibility: hidden;
 }
 
 body {
     @include flex(center);
-    flex-direction:column;
+    flex-direction: column;
     font-family: "Open Sans", sans-serif;
     min-height: 100vh;
     height: 100%;
@@ -68,7 +67,7 @@ main {
     align-items: flex-start;
     width: 100vw;
     flex: 1;
-    
+
     .main__header {
         @include flex(space-between);
         padding: 50px 0;
@@ -108,7 +107,6 @@ main {
                     color: $black;
                     cursor: pointer;
                     padding: 10px;
-                    text-decoration: none;
                     display: block;
 
                     &:hover {
@@ -144,7 +142,7 @@ main {
             display: none;
         }
 
-        .filter__btn{
+        .filter__btn {
             display: none;
         }
     }
@@ -216,10 +214,6 @@ main {
     }
 }
 
-option:hover {
-    background-color: yellow;
-}
-
 .filter {
     margin-bottom: 25px;
 
@@ -285,10 +279,11 @@ option:hover {
     }
 }
 
-.load{
+.load {
     @include flex(center);
+    display: none;
 
-    .load__btn{
+    .load__btn {
         margin: 35px;
         border: none;
         background-color: $primary;
@@ -297,7 +292,7 @@ option:hover {
     }
 }
 
-footer{
+footer {
     @include flex(center);
     height: 30px;
     width: 100%;
@@ -305,19 +300,16 @@ footer{
     color: $white;
 }
 
-
-
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     main {
         aside {
             background-color: $white;
-            position:fixed;
+            position: fixed;
             height: 100vh;
-            left:100vw;
-            right:0;
-            top:0;
-            bottom:0;
+            left: 100vw;
+            right: 0;
+            top: 0;
+            bottom: 0;
         }
 
         aside.active {
@@ -370,11 +362,10 @@ footer{
             font-size: 25px;
         }
 
-        
-        .filtersgroup .filter__btn{
+        .filter__btn {
             @include flex(space-between);
 
-            button{
+            button {
                 cursor: pointer;
                 width: 45%;
                 height: 40px;
@@ -382,16 +373,15 @@ footer{
                 font-size: 20px;
             }
 
-            .btn_apply{
+            .btn_apply {
                 background-color: $primary;
                 color: $white;
             }
 
-            .btn_clean{
+            .btn_clean {
                 background-color: #ffffff;
                 color: $light_gray;
                 border: 1px solid $light_gray;
-
             }
             
         }
@@ -418,11 +408,11 @@ footer{
             padding: 40px 18px 18px 18px;
         }
 
-        .filter__content{
+        .filter__content {
             flex: 1;
         }
 
-        .filter__footer{
+        .filter__footer {
             width: 100%;
         }
 
@@ -439,10 +429,13 @@ footer{
         }
 
         section .display__products {
-            gap: 20px;
+            justify-content: space-between;
 
             .product__item {
                 width: calc(50% - 20px);
+            }
+            .product__name, .product__parcel{
+                font-size: 15px;
             }
         }
     }
