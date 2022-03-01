@@ -141,10 +141,6 @@ main {
         ul.filter__color .filter__list:nth-last-child(-n + 5) {
             display: none;
         }
-
-        .filter__btn {
-            display: none;
-        }
     }
 
     .panel {
@@ -258,6 +254,10 @@ main {
     }
 }
 
+.filter__btn {
+    display: none;
+}
+
 .size {
     @include flex(start);
     flex-wrap: wrap;
@@ -362,29 +362,6 @@ footer {
             font-size: 25px;
         }
 
-        .filtergroup .filter__btn {
-            @include flex(space-between);
-
-            button {
-                cursor: pointer;
-                width: 45%;
-                height: 40px;
-                border: none;
-                font-size: 20px;
-            }
-
-            .btn_apply {
-                background-color: $primary;
-                color: $white;
-            }
-
-            .btn_clean {
-                background-color: #ffffff;
-                color: $light_gray;
-                border: 1px solid $light_gray;
-            }
-            
-        }
 
         .filtersgroup .filter__tittle i {
             opacity: 1;
@@ -438,5 +415,29 @@ footer {
                 font-size: 15px;
             }
         }
+    }
+
+    .filter__btn {
+        @include flex(space-between);
+
+        button {
+            cursor: pointer;
+            width: 45%;
+            height: 40px;
+            border: none;
+            font-size: 20px;
+        }
+
+        .btn_apply {
+            background-color: $primary;
+            color: $white;
+        }
+
+        .btn_clean {
+            background-color: #ffffff;
+            color: $light_gray;
+            border: 1px solid $light_gray;
+        }
+        
     }
 }
